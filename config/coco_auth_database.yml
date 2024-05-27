@@ -1,0 +1,13 @@
+default: &default
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: db/coco_auth_development.sqlite3
+
+test:
+  <<: *default
+  database: db/coco_auth_test.sqlite3
+
