@@ -9,3 +9,6 @@
 /test/dummy/storage/
 /test/dummy/tmp/
 .byebug_history
+
+/app/assets/builds/*
+!/app/assets/builds/.keep

@@ -1,17 +1,61 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Coco auth</title>
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
+  <head>
+    <title>CocoAuth</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-  <%= stylesheet_link_tag    "coco_auth/application", media: "all" %>
-</head>
-<body>
+    <%= stylesheet_link_tag 'coco_auth/application', media: 'all' %>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-  <h1>Coco Auth</h1>
+    <!-- Coconut Styles -->
+    <style>
+:root {
+  --coconut-brown: #4B3621;
+  --coconut-white: #F5F5F5;
+  --coconut-green: #228B22;
+  --coconut-cream: #FAF0E6;
+}
 
-  <%= yield %>
+      .bg-coconut-brown { background-color: var(--coconut-brown); }
+      .text-coconut-brown { color: var(--coconut-brown); }
 
-</body>
+      .bg-coconut-white { background-color: var(--coconut-white); }
+      .text-coconut-white { color: var(--coconut-white); }
+
+      .bg-coconut-green { background-color: var(--coconut-green); }
+      .text-coconut-green { color: var(--coconut-green); }
+
+      .bg-coconut-cream { background-color: var(--coconut-cream); }
+      .text-coconut-cream { color: var(--coconut-cream); }
+    </style>
+  </head>
+
+  <body class="bg-coconut-cream font-sans leading-normal tracking-normal">
+    <header class="bg-coconut-green p-4 shadow-md">
+      <div class="container mx-auto">
+        <h1 class="text-coconut-white text-2xl font-bold">🥥 CocoAuth</h1>
+      </div>
+    </header>
+
+    <main class="container mx-auto my-8 p-4 bg-coconut-white shadow-md">
+      <%= yield %>
+    </main>
+
+    <footer class="bg-coconut-brown p-4 shadow-md mt-8">
+      <div class="container mx-auto text-coconut-white">
+        <p> 
+          <%= [
+            'Why go nuts over SSO?', 
+            'Local IDP as smooth as coconut milk',
+            'Keep calm and coconut on',
+            'SSO testing doesn’t have to be a hard nut to crack',
+            'Easy peasy, coconut squeezy',
+            'CocoAuth: keeping things refreshingly simple'
+          ].sample %>
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
+

@@ -11,6 +11,3 @@ group :development do
   gem 'bootsnap', require: false
   gem 'sqlite3', '~> 1.4'
 end
-
-# To use a debugger
-# gem 'byebug', group: [:development, :test]
